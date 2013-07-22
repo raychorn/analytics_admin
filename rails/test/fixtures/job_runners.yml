@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data_segment_id: 1
+  query_id: 1
+  database_name: MyString
+  query: MyText
+  last_run: 2011-03-21 00:05:34
+  status: 1
+  store_in_db: false
+
+two:
+  data_segment_id: 1
+  query_id: 1
+  database_name: MyString
+  query: MyText
+  last_run: 2011-03-21 00:05:34
+  status: 1
+  store_in_db: false

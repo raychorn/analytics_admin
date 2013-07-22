@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  query_result_id: 1
+  original_query_string: MyText
+  data: MyText
+
+two:
+  query_result_id: 1
+  original_query_string: MyText
+  data: MyText

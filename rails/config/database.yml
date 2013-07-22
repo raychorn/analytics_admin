@@ -1,0 +1,44 @@
+# SQLite version 3.x
+#   gem install sqlite3-ruby (not necessary on OS X Leopard)
+
+#TODO: 'remote_mysql_host' and 'remote_mysql_port' are temporary until we make a data_source model
+#TODO: 'remote_hive_server' is temporary also
+development:
+  adapter: <%= defined?(JRUBY_VERSION) ? 'jdbcmysql' : 'mysql2' %>
+  encoding: utf8
+  reconnect: false
+  database: analytics_admin_dev
+#  pool: 5
+  username: analytics_admin
+  password: gyd82jd
+  host: localhost
+  remote_mysql_host: localhost
+  remote_mysql_port: 3306
+  remote_hive_server: hive1
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test: &test
+  adapter: jdbcmysql
+  encoding: utf8
+  reconnect: false
+  database: analytics_admin_test
+#  pool: 5
+  username: analytics_admin
+  password: gyd82jd
+
+production:
+  adapter: jdbcmysql
+  encoding: utf8
+  reconnect: false
+  database: analytics_admin
+#  pool: 5
+  username: analytics_admin
+  password: gyd82jd
+  remote_mysql_host: hive2
+  remote_mysql_port: 3306
+  remote_hive_server: hive1
+
+cucumber:
+  <<: *test

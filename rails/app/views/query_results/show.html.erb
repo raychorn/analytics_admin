@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data source:</b>
+  <%= @query_result.data_source_id %>
+</p>
+
+<p>
+  <b>Query string:</b>
+  <%= @query_result.query_string %>
+</p>
+
+<p>
+  <b>Store in db:</b>
+  <%= @query_result.store_in_db %>
+</p>
+
+<p>
+  <%= render :partial => 'data_results/show_list', :locals => { :data_results => @query_result.latest_data_results } %>
+</p>
+
+
+<%= link_to 'Edit', edit_query_result_path(@query_result) %> |
+<%= link_to 'Back', query_results_path %>

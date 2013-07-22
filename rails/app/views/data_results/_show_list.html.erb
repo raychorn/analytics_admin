@@ -1,0 +1,7 @@
+<h4>Data Results</h4>
+<ul>
+<% data_results.each do |data_result| %>
+  <li><%= data_result.original_query_string %></li>
+  <li><%= data_result.data %></li>
+<% end %>
+</ul>

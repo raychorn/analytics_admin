@@ -1,0 +1,33 @@
+<h1>Listing data_parameters</h1>
+
+<table>
+  <tr>
+    <th>Group</th>
+    <th>Column name</th>
+    <th>Symbolic name</th>
+    <th>Display name</th>
+    <th>Short display name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @data_parameters.each do |data_parameter| %>
+  <tr>
+    <td><%= data_parameter.group_id %></td>
+    <td><%= data_parameter.column_name %></td>
+    <td><%= data_parameter.symbolic_name %></td>
+    <td><%= data_parameter.display_name %></td>
+    <td><%= data_parameter.short_display_name %></td>
+    <td><%= data_parameter.description %></td>
+    <td><%= link_to 'Show', data_parameter %></td>
+    <td><%= link_to 'Edit', edit_data_parameter_path(data_parameter) %></td>
+    <td><%= link_to 'Destroy', data_parameter, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Data parameter', new_data_parameter_path %>

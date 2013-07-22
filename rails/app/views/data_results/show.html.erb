@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Query result:</b>
+  <%= @data_result.query_result_id %>
+</p>
+
+<p>
+  <b>Original query string:</b>
+  <%= @data_result.original_query_string %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @data_result.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_data_result_path(@data_result) %> |
+<%= link_to 'Back', data_results_path %>

@@ -1,0 +1,2 @@
+module DataResultsHelper
+end

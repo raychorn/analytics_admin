@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data_source_id: 1
+  job_runner_id: 1
+  query_string: MyText
+  store_in_db: false
+
+two:
+  data_source_id: 1
+  job_runner_id: 1
+  query_string: MyText
+  store_in_db: false

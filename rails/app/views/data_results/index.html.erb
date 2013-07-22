@@ -1,0 +1,27 @@
+<h1>Listing Data results</h1>
+
+<table>
+  <tr>
+    <th>Query result</th>
+    <th>Original query string</th>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @data_results.each do |result| %>
+  <tr>
+    <td><%= result.query_result_id %></td>
+    <td><%= result.original_query_string %></td>
+    <td><%= result.data %></td>
+    <td><%= link_to 'Show', result %></td>
+    <td><%= link_to 'Edit', edit_data_result_path(result) %></td>
+    <td><%= link_to 'Destroy', result, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New DataResult', new_data_result_path %>

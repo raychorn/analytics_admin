@@ -1,0 +1,29 @@
+<h1>Listing job_runners</h1>
+
+<table>
+  <tr>
+    <th>Database name</th>
+    <th>Last run</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @job_runners.each do |job_runner| %>
+  <tr>
+    <td><%= job_runner.database_name %></td>
+    <td><%= job_runner.last_run %></td>
+    <td><%= job_runner.status.inspect %></td>
+    <td><%= link_to 'Show', job_runner %></td>
+    <td><%= link_to 'Edit', edit_job_runner_path(job_runner) %></td>
+    <td><%= link_to 'Destroy', job_runner, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Start', start_job_runner_path(job_runner) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Job runner', new_job_runner_path %>

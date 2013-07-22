@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Database name:</b>
+  <%= @job_runner.database_name %>
+</p>
+
+<p>
+  <b>Last run:</b>
+  <%= @job_runner.last_run %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @job_runner.status.inspect %>
+</p>
+
+<%= link_to 'Edit', edit_job_runner_path(@job_runner) %> |
+<%= link_to 'Back', job_runners_path %>

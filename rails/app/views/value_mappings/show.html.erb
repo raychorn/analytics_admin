@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data parameter:</b>
+  <%= @value_mapping.data_parameter_id %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @value_mapping.key %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @value_mapping.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_value_mapping_path(@value_mapping) %> |
+<%= link_to 'Back', value_mappings_path %>

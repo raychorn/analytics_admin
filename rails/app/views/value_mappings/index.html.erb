@@ -1,0 +1,27 @@
+<h1>Listing value_mappings</h1>
+
+<table>
+  <tr>
+    <th>Data parameter</th>
+    <th>Key</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @value_mappings.each do |value_mapping| %>
+  <tr>
+    <td><%= value_mapping.data_parameter_id %></td>
+    <td><%= value_mapping.key %></td>
+    <td><%= value_mapping.value %></td>
+    <td><%= link_to 'Show', value_mapping %></td>
+    <td><%= link_to 'Edit', edit_value_mapping_path(value_mapping) %></td>
+    <td><%= link_to 'Destroy', value_mapping, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Value mapping', new_value_mapping_path %>

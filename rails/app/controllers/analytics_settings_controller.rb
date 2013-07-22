@@ -1,0 +1,2 @@
+class AnalyticsSettingsController < ApplicationController
+end
